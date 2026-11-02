@@ -1,20 +1,23 @@
 public class Course {
-    private final String lesson;
-    private final String time;
-    private final String classroom;
+    private final int id;
+    private final String name;
+    private final int timeId;
+    private final int roomId;
 
-    public Course(String lesson, String time, String classroom) {
-        this.lesson = lesson;
-        this.time = time;
-        this.classroom = classroom;
+    public Course(int id, String name, int timeId, int roomId) {
+        this.id = id;
+        this.name = name;
+        this.timeId = timeId;
+        this.roomId = roomId;
     }
-    public String getLesson(){ return lesson; }
-    public String getTime(){ return time; }
-    public String getClassroom() { return classroom; }
+
+    public int getId() { return id; }
+    public String getName() { return name; }
+    public int getTimeId() { return timeId; }
+    public int getRoomId() { return roomId; }
 
     @Override
-    public String toString(){
-        return lesson + " - "+ time + " - " + classroom;
+    public String toString() {
+        return id + ". " + name + " (time_id=" + timeId + ", room_id=" + roomId + ")";
     }
-
 }
